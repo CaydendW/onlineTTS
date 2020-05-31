@@ -2,7 +2,7 @@
 A python/flask program that takes texts from an HTML method and plays it back to you using text to speech. It can even work over the internet.
 
 # Notes:
-Before using this code you will hav eto do some setup first. At the bottom of the code where it says app.run(debug = True, port = 5000, host = "y") you have to replace y with your machines' IP adress. For example app.run(debug = True, port = 5000, host = "192.168.1.375"). This it's where Flask will host the web server. You will also have to change the x in the part where the HTML5 for the page is written to the domain and port (Default port is 5000) you want to publish it to. For example: 
+Before using this code you will hav eto do some setup first. At the bottom of the code where it says app.run(debug = True, port = 5000, host = "y") you have to replace y with your machines' IP adress. For example: app.run(debug = True, port = 5000, host = "192.168.1.375"). This it's where Flask will host the web server. You will also have to change the x in the part where the HTML5 for the page is written to the domain and port (Default port is 5000) you want to publish it to. For example: 
 
 @app.route('/main',methods = ['POST', 'GET'])
 def hello():   
