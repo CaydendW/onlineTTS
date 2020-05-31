@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, request
-import win32com.client as wincl
+import pyttsx3
 import time as time
 
 app = Flask(__name__)
@@ -9,8 +9,10 @@ def login():
    if request.method == 'GET':
       wordstosay = request.args.get('words')
 
-   speak = wincl.Dispatch("SAPI.SpVoice")
-   speak.Speak(wordstosay)
+   engine = pyttsx3.init()
+   engine.setProperty('rate', 140)
+   engine.say(wordstosay)
+   engine.runAndWait()
 
    return redirect("x")
 
